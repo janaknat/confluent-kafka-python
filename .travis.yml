@@ -67,6 +67,9 @@ jobs:
     services: docker
     env: BUILD_WHEELS=1
     arch: arm64-graviton2
+    dist: focal
+    virt: vm
+    group: edge
     script: tools/wheels/build-wheels.sh ${LIBRDKAFKA_VERSION#v} wheelhouse
 
   - name: "Wheels: Linux x64"
